@@ -17,4 +17,5 @@ $asset = $releases.assets | Where-Object name -EQ $File
 if (-not (Test-Path $OutPath)) {
     New-Item $OutPath -ItemType Directory
 }
+$ProgressPreference = "SilentlyContinue"
 Invoke-WebRequest -Uri $asset.browser_download_url -OutFile (Join-Path $OutPath $File)

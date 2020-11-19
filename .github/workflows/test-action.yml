@@ -25,3 +25,5 @@ jobs:
         with:
           repo: KiruyaMomochi/RediveExtract
           file: RediveExtract.zip
+      - runs: Test-Path ./RediveExtract.zip
+        shell: pwsh
